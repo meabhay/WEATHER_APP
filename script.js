@@ -108,8 +108,9 @@ function showError(){
   //if not exist add it
   const image = document.createElement("img");
   image.src =
-    "/images/error.svg";
-    image.id = "errorImg";
+    "https://st3.depositphotos.com/2926815/13843/v/450/depositphotos_138431312-stock-illustration-career-website-banner-concept-with.jpg";
+  image.id = "errorImg";
+  image.classList.add("p-14");
   image.style.height = "18rem";
   errorDiv.appendChild(image);
   const newPara = document.createElement("p");
