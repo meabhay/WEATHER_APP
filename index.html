@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Inside <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body class="overflow-x-hidden">
+<!-- Wrapper -->
+    <div class="bg-gradient-ocean text-white flex flex-col  items-center min-h-screen w-[100vw]">
+        <!-- Heading -->
+        <h1 class="font-bold m-4 mb-2 p-4 tracking-wider text-3xl">WEATHER APP</h1>
+
+        <!-- Tabs -->
+        <div class="flex justify-center items-center space-x-[18rem]">
+            <p tabindex="0" id="weatherTab" class="tracking-widest text-sm focus:bg-white focus:bg-opacity-50 focus:px-1 focus:rounded-sm cursor-pointer">Your Weather</p>
+            <p tabindex="0" id="searchTab" class="tracking-widest text-sm focus:bg-white focus:bg-opacity-50 focus:px-1 focus:rounded-sm cursor-pointer">Search Weather</p>
+        </div>
+
+        <!-- weather container (all)-->
+        <div class="flex flex-col justify-center items-center" id="weatherAll">
+
+            <!-- grant location container -->
+            <div id="grantLocaDiv" class="flex flex-col justify-center items-center  m-20 gap-4">
+                <img src="/images/location.png" alt="" class="h-16 w-16">
+                <p class="font-bold text-2xl tracking-wide mt-2">Grant Location Access</p>
+                <p class="text-xs font-sans tracking-wide">Allow Access To Get Weather Information</p>
+                <button id="grantBtn" class="uppercase text-sm tracking-wider bg-[#3F72AF] p-2 rounded-md w-[11rem] m-10 hover:bg-[#4086db] transition-all duration-200">Grant Access</button>
+            </div>
+
+            <!-- Search container -->
+            <form id="searchContainer" class="flex justify-center items-center gap-1 mt-10 w-[45vw] mx-auto">
+                <input autocomplete="off" type="text" placeholder="Search for city..." id="cityInput" class="bg-white bg-opacity-40 w-full h-8 rounded-md p-4 placeholder-white placeholder-opacity-80 outline-none focus:outline-white  ">
+                <button id="searchBtn">
+                    <img src="/images/search.png" alt="" class="h-8 w-8 bg-[#4086db] m-4 p-2 rounded-full  bg-opacity-50 opacity-90 ">
+                </button>
+            </form>
+
+             <div id="errorDiv" >
+
+            </div>
+
+            <!-- loading screen loader -->
+            <div id="loadingDiv" class="flex flex-col justify-center items-center m-[5rem]" >
+                <img src="/images/loading.gif" alt="" class="h-[10rem] ">
+                <p class="text-lg ">Loading</p>
+            </div>
+
+            <!-- Show weather information -->
+            <div id="showWeatherDiv" class="flex flex-col justify-center items-center  mt-[4rem] pb-2">
+
+                <!-- city & country icon -->
+                <div class="flex justify-center items-center gap-2 p-4">
+                    <p id="cityName" class="text-3xl font-sans tracking-wider "></p>
+                    <img id="countryIcon" class="h-8 w-10 p-[5px]">
+                </div>
+
+                <p id="weather_description" class="font-sans tracking-wider text-2xl pt-3 "></p>
+
+                <img id="weather_icon" class="h-12 w-12 mb-10">
+
+                <p id="temperature" class="text-4xl font-bold"></p>
+
+                <!-- 3 cards parameters -->
+
+                <div class="flex justify-center gap-16 items-center w-[100vw] mt-10" >
+                    <!-- card1 -->
+                    <div class="flex flex-col justify-center items-center bg-white bg-opacity-40 w-[12rem] p-1 rounded-md">
+                        <img src="/images/wind.png" class="h-16 w-16 p-2">
+                        <p class="uppercase pb-2 font-sans text-2xl">Windspeed</p>
+                        <p id="windspeed" class="font-sans text-2xl" ></p>
+                    </div>
+
+                    <!-- card2 -->
+                    <div class="flex flex-col justify-center items-center bg-white bg-opacity-40 w-[12rem] p-1 rounded-md">
+                        <img src="/images/humidity.png" class="h-16 w-16 p-4">
+                        <p class="uppercase pb-2 font-sans text-2xl">
+                        humidity</p>
+                        <p id="humidity" class="font-sans text-2xl"></p>
+                    </div>
+
+                    <!-- card3 -->
+                    <div class="flex flex-col justify-center items-center bg-white bg-opacity-40 w-[12rem] p-1 rounded-md">
+                        <img src="/images/cloud.png" class="h-16 w-16 p-2">
+                        <p class="uppercase pb-2 font-sans text-2xl">clouds</p>
+                        <p id="clouds" class="font-sans text-2xl"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
