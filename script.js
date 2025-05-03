@@ -107,8 +107,12 @@ function showError(){
   if (errorImg) return;
   //if not exist add it
   const image = document.createElement("img");
-  image.src = "/images/errorImage.png";
-  image.id = "errorImg";
+  image.src =
+    "https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-5529.jpg";
+    image.classList.add("rounded-md");
+    image.classList.add("w-[20rem]");
+    image.classList.add("h-2");
+    image.id = "errorImg";
   image.style.height = "18rem";
   errorDiv.appendChild(image);
   const newPara = document.createElement("p");
