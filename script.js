@@ -107,7 +107,7 @@ function showError(){
   if (errorImg) return;
   //if not exist add it
   const image = document.createElement("img");
-  image.src = "/images/not-found.png";
+  image.src = "./images/not-found.png";
   image.id = "errorImg";
   image.style.height = "18rem";
   errorDiv.appendChild(image);
